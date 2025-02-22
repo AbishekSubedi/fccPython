@@ -40,5 +40,13 @@ def arithmetic_arranger(problems, show_answers=False):
     return arranged_problems
 
 
-print(
-    f'\n{arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"], True)}')
+# print(
+#     f'\n{arithmetic_arranger(["32 + 698", "3801 - 2", "45 + 43", "123 + 49"], True)}')
+
+while True:
+    problem = input("\nEnter a series of arithmetic problems (or 'q' to quit): ")
+    if problem.lower() == 'q':
+        break
+    problems = problem.split(", ")
+    print(arithmetic_arranger(problems, True))
+    print()
